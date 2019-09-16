@@ -7,7 +7,7 @@ Important Features:
 
     1. Two way data binding (In forms)
 
-    2. Conditional Rendering of menubar drop down
+    2. Conditional Rendering of menubar drop down and MySQL/ PostgreSQL buttons
 
     3. Routing
 
@@ -21,7 +21,7 @@ Instructions to run the Application:
 
     1. unzip the folder.
 
-    2. navigate to the folder using cli and cd into the unzipped folder.
+    2. navigate to the folder using cli and cd into the unzipped folder. (Make sure to cd into inner most "oai" folder)
 
     3. run "npm install"
 
@@ -29,16 +29,16 @@ Instructions to run the Application:
 
     5. There are three routes,
         a. "/" -> Which takes to the settings page (default route)
-        b. "/settings" -> Click the settings button on menubar.
+        b. "/settings" -> Click the settings button on menubar same as "/".
         c. "/datasets" -> Click the "My Datasets" on the menubar.
 
-    6. "settings" page has form that supports two way data binding and reactive to clicks and logs the result on the console.
+    6. "settings" page has form that supports two way data binding and is reactive to clicks and logs the result on the console.
 
-    7. "datasets" page has "upload csv" button that uploads the csv and converts it into string and prints it in the        console.
+    7. "datasets" page has "upload csv" button that uploads the csv and converts it into string and prints it in the        console as soon as the user uploads the file.
 
-    8. It alerts if some other file is selected.
+    8. It alerts if some other file type is selected.
 
-    9. This page also has a reactive form and on submit logs the results to the console. 
+    9. These pages also have forms that are reactive to clicks and on submit logs the results to the console. 
 
 
 

@@ -43,14 +43,13 @@ class DatasetsPage extends Component {
   }
 
   handleChange = event => {
-    console.log(event);
     this.setState({
       [event.target.id]: event.target.value
     });
   };
 
   handleDBSelect = db => {
-    console.log(db)
+    console.log("Selected new DB", db);
     this.setState({
       selectedDB: db
     })
