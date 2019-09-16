@@ -54,7 +54,7 @@ class DatasetsPage extends Component {
     console.log("Dataset Settings: ", this.state);
   };
 
-  upload() {
+  directUpload() {
     var fileUpload = document.getElementById("file");
     var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv)$/;
     if (regex.test(fileUpload.value.toLowerCase())) {
@@ -129,7 +129,7 @@ class DatasetsPage extends Component {
                 type="file"
                 id="file"
                 className="file-upload-input"
-                onChange={this.upload.bind(this)}
+                onChange={this.directUpload.bind(this)}
               />
               <Button
                 id="fileUpload"

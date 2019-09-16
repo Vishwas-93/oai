@@ -27,6 +27,11 @@ class MenuBar extends React.Component {
     });
   }
 
+  handleSubMenuItemClick(e){
+    let val = e.currentTarget.textContent;
+    console.log("Clicked on ", val);
+  }
+
   render() {
     return (
       <div className="menu-width">
@@ -103,9 +108,9 @@ class MenuBar extends React.Component {
             </li>
             {this.state.showDropDown ? (
               <ul className="sub-lst">
-                <li>MoM user churn for Q3</li>
-                <li>MoM user churn for Q3</li>
-                <li>MoM user churn for Q3</li>
+                <a className="remove-decoration" href="javascript:void(0);" onClick={this.handleSubMenuItemClick.bind(this)}><li>MoM user churn for Q3</li></a>
+                <a className="remove-decoration" href="javascript:void(0);" onClick={this.handleSubMenuItemClick.bind(this)}><li>Merch sales for Jan</li></a>
+                <a className="remove-decoration" href="javascript:void(0);" onClick={this.handleSubMenuItemClick.bind(this)}><li>State-wise donor prediction</li></a>
               </ul>
             ) : (
               ""
