@@ -1,4 +1,4 @@
-This App was created with Bootstrap
+This App was created with create-react-app
 
 All the components have state associated with them hence using class components.
 
