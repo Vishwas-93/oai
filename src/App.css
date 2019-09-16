@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.parent {
+  display: flex;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+
+.narrow {
+  width: 20%;
+  height: 100vh;
+}
+
+.wide {
+  width: 80%;
+  flex: 1;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 650px) {
+  .parent {
+    display: flex;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  
+  
+  .narrow {
+    display: none;
+  }
+  
+  .wide {
+    width: 100%;
+    flex: 1;
+    height: 100vh;
+  }
+}
