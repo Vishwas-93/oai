@@ -21,7 +21,8 @@ class DatasetsPage extends Component {
       host: "Monica Greenleaf",
       port: "monica.greenleaf@microsoft.com",
       password: "Microsoft, Inc.",
-      database: "monica.greenleaf@microsoft.com"
+      database: "monica.greenleaf@microsoft.com",
+      selectedDB: "postgresql"
     };
   }
 
@@ -48,6 +49,13 @@ class DatasetsPage extends Component {
     });
   };
 
+  handleDBSelect = db => {
+    console.log(db)
+    this.setState({
+      selectedDB: db
+    })
+  }
+
   handleSubmit = event => {
     console.log(event);
     event.preventDefault();
@@ -73,6 +81,15 @@ class DatasetsPage extends Component {
   }
 
   render() {
+    let isMySQL = false;
+    let isPSQL = false;
+    if(this.state.selectedDB==="mysql"){
+      isMySQL=true
+    }
+    else{
+      isPSQL=true
+    }
+
     return (
       <div
         className="fileupload-container"
@@ -167,7 +184,7 @@ class DatasetsPage extends Component {
             <br />
             <div className="small-title">
               In order to ensure Obviously AI has access to your database,
-              please whitelist our IP address 104.198.187.43 on your database
+              please whitelist our IP address <span className="green-text">104.198.187.43</span> on your database
               firewall.
             </div>
 
@@ -178,8 +195,9 @@ class DatasetsPage extends Component {
                   <Col xs={12} md={2} sm={12} className="adjust-col-padding">
                     <div className="column-height-layout">
                       <div className="col-padding-for-buttons">
-                        <Button className="db-buttons dark-txt">
-                          <DiStreamline color="black" size="4em" />
+                        
+                        <Button className={isMySQL ? "db-buttons btn-green" : "db-buttons dark-txt"} onClick={() => {this.handleDBSelect("mysql")}}>
+                          <DiStreamline color={isMySQL ? "white" : "black"} size="4em" />
                           <br />
                           MySQL
                         </Button>
@@ -190,8 +208,8 @@ class DatasetsPage extends Component {
                   <Col xs={12} md={2} sm={12} className="adjust-col-padding">
                     <div className="column-height-layout">
                       <div className="col-padding-for-buttons">
-                        <Button className="db-buttons btn-green">
-                          <DiStreamline color="white" size="4em" />
+                        <Button className={isPSQL ? "db-buttons btn-green" : "db-buttons dark-txt"} onClick={() => {this.handleDBSelect("postgresql")}}>
+                          <DiStreamline color={isPSQL ? "white" : "black"} size="4em" />
                           <br />
                           PostgreSQL
                         </Button>

@@ -30,6 +30,10 @@
     color: black;
 }
 
+.green-text{
+    color:  rgb(124, 196, 124);
+}
+
 .no-a-style{
     text-decoration: none !important;
     color: black;

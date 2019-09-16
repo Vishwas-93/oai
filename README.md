@@ -17,7 +17,7 @@ Important Features:
 
 
 
-Instructions:
+Instructions to run the Application:
 
     1. unzip the folder.
 
@@ -39,7 +39,9 @@ Instructions:
     8. It alerts if some other file is selected.
 
     9. This page also has a reactive form and on submit logs the results to the console. 
-    
+
+
+
 
 Known Bugs:
 
@@ -48,5 +50,7 @@ Known Bugs:
     2. Side menubar will be hidden in mobile. (I can add hamburger icon and make it take full width when clicked on mobile);
 
     3. Icons used are based on assumptions. (As they were not a part of the zipped folder provide).
+
+
 
 

@@ -86,8 +86,7 @@ class MenuBar extends React.Component {
               onClick={this.handleMenuItemClick.bind(this)}
             >
               <li className="menu-item-list">
-                <IoIosHelpCircleOutline />
-                Help
+                <IoIosHelpCircleOutline /> Help
               </li>
             </a>
             <li className="menu-item-list">
